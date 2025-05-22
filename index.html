@@ -4,6 +4,122 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <div class="p">AMELIA Cotillon y Reposteria</div>
+        <ul>
+          <li class="liIndex"><a href="./index.html">Inicio</a></li>
+          <li class="liIndex"><a href="./pages/nosotros.html">Nosotros</a></li>
+          <li class="liIndex">
+            <a href="./pages/Reposteria.html">Reposteria</a>
+          </li>
+          <li class="liIndex"><a href="./pages/cotillon.html">Cotillon</a></li>
+          <li class="liIndex"><a href="./pages/contactos.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="carrusel">
+        <div class="carousel-container">
+          <button class="prev">&#10094;</button>
+          <div class="carousel-slide">
+            <img src="./assets/foto1.jpg" alt="Imagen 1" class="imgcarousel" />
+            <img src="./assets/foto2.jpg" alt="Imagen 2" class="imgcarousel" />
+            <img src="./assets/foto3.jpg" alt="Imagen 3" class="imgcarousel" />
+            <img src="./assets/foto4.jpg" alt="Imagen 3" class="imgcarousel" />
+            <img src="./assets/foto5.jpg" alt="Imagen 3" class="imgcarousel" />
+          </div>
+          <button class="next">&#10095;</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="social">
+        <ul class="mvp-foot-soc-list">
+          <li>
+            <a href="https://www.facebook.com" target="_blank">
+              <img
+                src="./assets/facebook (1).png"
+                alt="Facebook"
+                width="30"
+                height="30"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank">
+              <img
+                src="./assets/twitter.png"
+                alt="Twitter"
+                width="30"
+                height="30"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com" target="_blank">
+              <img
+                src="./assets/instagram.png"
+                alt="Instagram"
+                width="30"
+                height="30"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com" target="_blank">
+              <img
+                src="./assets/tik-tok.png"
+                alt="TikTok"
+                width="30"
+                height="30"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <div class="footer-info">
+        <p>📍 Dirección: Calle Eva Peron 5230, Ciudad Rosario</p>
+        <p>
+          🗺️ Ubicación:
+          <a href="https://goo.gl/maps/xyz" target="_blank"
+            >Ver en Google Maps</a
+          >
+        </p>
+      </div>
+    </footer>
+    <script>
+      const slide = document.querySelector(".carousel-slide");
+      const images = document.querySelectorAll(".carousel-slide img");
+      const prevBtn = document.querySelector(".prev");
+      const nextBtn = document.querySelector(".next");
+
+      let counter = 0;
+      const size = images[0].clientWidth;
+
+      const updateCarousel = () => {
+        slide.style.transform = `translateX(${-size * counter}px)`;
+      };
+
+      nextBtn.addEventListener("click", () => {
+        counter = (counter + 1) % images.length;
+        updateCarousel();
+      });
+
+      prevBtn.addEventListener("click", () => {
+        counter = (counter - 1 + images.length) % images.length;
+        updateCarousel();
+      });
+
+      window.addEventListener("resize", () => {
+        updateCarousel(); // mantener la posición en pantallas chicas
+      });
+    </script>
+  </body>
 </html>
