@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Condensed+One&display=swap");
-
 /*
 colores usados
 #eed1d7
@@ -8,18 +7,51 @@ green
  rgb(255, 0, 179)
  black
 */
-
-body {
-  background-color: #eed1d7;
+.footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.footer .social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.footer hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 15px auto;
+  width: 80%;
+}
+.footer .footer-info p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 14px;
+}
+.footer .footer-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+.footer .footer-info a:hover {
+  text-decoration: underline;
 }
 
-.liIndex {
+.liIndex,
+li {
   list-style: none;
   display: flex;
   gap: 25px;
-  text-decoration: none;
   justify-content: center;
 }
+.liIndex a,
+li a {
+  text-decoration: none;
+}
+
 .p {
   display: flex;
   justify-content: center;
@@ -37,102 +69,52 @@ h1 {
   padding: 25px;
   font-family: "Roboto", sans-serif;
 }
-.h1Tienda {
+h1.h1Tienda {
   color: black;
 }
 
-/*main*/
-.carousel-container {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+.contacto-main {
+  padding: 2px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.carousel-slide {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
-}
-
-.carousel-slide img {
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  font-size: 2rem;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1;
-  border-radius: 50%;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-/*footer*/
-
-.footer {
-  background-color: #f8f8f8;
-  padding: 20px;
+.formulario-contacto h2 {
   text-align: center;
-  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+  color: #ff69b4;
 }
-
-.footer .social ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 10px 0;
+.formulario-contacto form {
   display: flex;
-  justify-content: center;
-  gap: 15px;
+  flex-direction: column;
 }
-
-.footer hr {
+.formulario-contacto label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.formulario-contacto button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #ff69b4;
+  color: white;
   border: none;
-  border-top: 1px solid #ccc;
-  margin: 15px auto;
-  width: 80%;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.formulario-contacto button:hover {
+  background-color: #ff1493;
 }
 
-.footer-info p {
-  margin: 5px 0;
-  color: #555;
-  font-size: 14px;
-}
-
-.footer-info a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.footer-info a:hover {
-  text-decoration: underline;
-}
-
-/*nosotros*/
 .p-nosotros {
   font-family: "Georgia", serif;
   font-size: 18px;
@@ -143,7 +125,6 @@ h1 {
   max-width: 800px;
 }
 
-/*resposteria*/
 .galeria-reposteria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -160,69 +141,68 @@ h1 {
   background-color: white;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
 }
-
 .producto img {
   width: 100%;
   height: auto;
   border-radius: 8px;
 }
-
 .producto h3 {
   font-size: 1.1rem;
   margin: 10px 0 5px;
   color: #333;
 }
-
 .producto p {
   font-size: 1rem;
   color: #d2691e;
   font-weight: bold;
 }
 
-/*contacto*/
-.contacto-main {
-  padding: 2px;
-  max-width: 600px;
-  margin: 0 auto;
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
-.formulario-contacto h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #ff69b4;
-}
-
-.formulario-contacto form {
+.carousel-container .carousel-slide {
   display: flex;
-  flex-direction: column;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
-
-.formulario-contacto label {
-  margin-top: 10px;
-  font-weight: bold;
+.carousel-container .carousel-slide img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  flex-shrink: 0;
 }
-
-.formulario-contacto input,
-.formulario-contacto textarea {
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-.formulario-contacto button {
-  margin-top: 20px;
-  padding: 12px;
-  background-color: #ff69b4;
-  color: white;
+.carousel-container .prev,
+.carousel-container .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
   border: none;
-  border-radius: 6px;
-  font-size: 1rem;
+  font-size: 2rem;
+  padding: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  z-index: 1;
+  border-radius: 50%;
+}
+.carousel-container .prev:hover,
+.carousel-container .next:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.carousel-container .prev {
+  left: 10px;
+}
+.carousel-container .next {
+  right: 10px;
 }
 
-.formulario-contacto button:hover {
-  background-color: #ff1493;
+body {
+  background-color: #eed1d7;
 }
+
+/*# sourceMappingURL=style.css.map */
