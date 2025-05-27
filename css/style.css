@@ -7,6 +7,11 @@ green
  rgb(255, 0, 179)
  black
 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .footer {
   background-color: #f8f8f8;
   padding: 20px;
@@ -33,7 +38,7 @@ green
   font-size: 14px;
 }
 .footer .footer-info a {
-  color: #007bff;
+  color: #ff00bf;
   text-decoration: none;
 }
 .footer .footer-info a:hover {
@@ -50,6 +55,12 @@ li {
 .liIndex a,
 li a {
   text-decoration: none;
+  color: black;
+}
+.liIndex a:hover,
+li a:hover {
+  color: darkgray;
+  transform: translate(3px);
 }
 
 .p {
